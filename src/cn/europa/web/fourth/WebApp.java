@@ -1,6 +1,5 @@
 package cn.europa.web.fourth;
 
-import cn.europa.web.third.LoginServlet;
 
 import java.util.Map;
 
@@ -22,11 +21,6 @@ public class WebApp {
 
         servletMap.put("login", new LoginServlet());
         urlMapping.put("/login", "login");
-
-        System.out.println("web app init succeed. servletContext:");
-        for (Map.Entry<String, String> entry : urlMapping.entrySet()) {
-            System.out.println(entry.getKey());
-        }
     }
 
     public static Servlet getServlet(String url) {
